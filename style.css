@@ -1,11 +1,10 @@
-/* General reset */
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and general page layout */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -13,69 +12,81 @@ body {
     line-height: 1.6;
 }
 
-/* Header and Navigation Bar */
+/* Header styles */
 header {
-    background-color: #333 
-    color: #fff;
-    padding: 15px 20px;
+    background-color: #ffffff; /* White header background for contrast */
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
 }
 
 nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center; /* Vertically align items */
+    flex-wrap: wrap;
 }
 
-nav .logo-container img {
-    max-height: 50px; /* Adjust logo height */
-    max-width: 100%;
+.logo-container img {
+    max-height: 50px;
+    width: auto;
 }
 
-nav .nav-links {
-    list-style-type: none;
+.nav-links {
+    list-style: none;
     display: flex;
-    gap: 20px; /* Adds space between menu items */
+    gap: 20px;
 }
 
-nav .nav-links li {
-    display: inline;
-}
-
-nav .nav-links a {
+.nav-links li a {
     text-decoration: none;
-    color: #333;
-    font-size: 18px;
+    color: #2a99de;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #1a6fa5;
 }
 
 /* Hero Section */
 #hero {
-    background-color: #2a99de; 
-    color: #fff; /* White text color */
+    background-color: #2a99de;
+    color: white;
     text-align: center;
-    padding: 50px 20px;
-    margin-top: 20px;
+    padding: 60px 20px;
 }
 
 #hero h1 {
-    font-size: 3em;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 #hero p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 /* About Section */
 #about {
-    padding: 20px;
     background-color: #fff;
-    margin-top: 40px;
-    border-radius: 5px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Footer */
 footer {
-    text-align: center;
     background-color: #333;
-    color: #fff;
-    padding: 15px;
+    color: white;
+    text-align: center;
+    padding: 20px;
     margin-top: 40px;
+    font-size: 14px;
 }
