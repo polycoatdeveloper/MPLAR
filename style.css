@@ -1,66 +1,74 @@
-/* Reset some default styles */
+/* General reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body and general page layout */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    padding: 20px;
+    line-height: 1.6;
 }
 
+/* Header and Navigation Bar */
 header {
-    background-color: #333;
+    background-color: #2a99de; /* Blue background for header */
     color: #fff;
-    padding: 15px 0;
-    text-align: center;
+    padding: 15px 20px;
 }
 
-nav ul {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically align items */
+}
+
+nav .logo-container img {
+    max-height: 50px; /* Adjust logo height */
+    max-width: 100%;
+}
+
+nav .nav-links {
     list-style-type: none;
+    display: flex;
+    gap: 20px; /* Adds space between menu items */
 }
 
-nav ul li {
+nav .nav-links li {
     display: inline;
-    margin: 0 15px;
 }
 
-nav ul li a {
-    color: #fff;
+nav .nav-links a {
     text-decoration: none;
+    color: white;
     font-size: 18px;
 }
 
+/* Hero Section */
 #hero {
-    background-color: #2a99de;
-    color: #fff;
+    background-color: #2a99de; /* Set hero background to blue */
+    color: #fff; /* White text color */
     text-align: center;
     padding: 50px 20px;
-    margin-bottom: 40px;
+    margin-top: 20px;
 }
 
 #hero h1 {
     font-size: 3em;
 }
 
-#hero button {
-    padding: 10px 20px;
+#hero p {
     font-size: 1.2em;
-    cursor: pointer;
-    border: none;
-    background-color: #333;
-    color: white;
-    border-radius: 5px;
 }
 
+/* About Section */
 #about {
     padding: 20px;
     background-color: #fff;
-    margin-bottom: 40px;
+    margin-top: 40px;
     border-radius: 5px;
 }
 
@@ -69,7 +77,5 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 15px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 40px;
 }
