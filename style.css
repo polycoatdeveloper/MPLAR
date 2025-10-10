@@ -15,7 +15,7 @@ body {
 
 /* Header and Navigation Bar */
 header {
-    background-color: #2a99de; /* Blue background for header */
+    background-color: #333 
     color: #fff;
     padding: 15px 20px;
 }
@@ -49,7 +49,7 @@ nav .nav-links a {
 
 /* Hero Section */
 #hero {
-    background-color: #2a99de; /* Set hero background to blue */
+    background-color: #2a99de; 
     color: #fff; /* White text color */
     text-align: center;
     padding: 50px 20px;
