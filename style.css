@@ -1,92 +1,217 @@
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* -------------------------------------------------------------------
+   Base / Reset
+   ------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;  /* 16px default */
+  line-height: 1.5;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f8f8f8;
 }
 
-/* Header styles */
-header {
-    background-color: #ffffff; /* White header background for contrast */
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+/* Link styles */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #004499;
+  text-decoration: underline;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: “Arial Bold”, Arial, sans-serif;
+  color: #222;
+  margin-bottom: 0.5em;
+}
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.4rem; }
+/* etc… */
+
+/* Paragraphs */
+p {
+  margin-bottom: 1em;
 }
 
-.logo-container img {
-    max-height: 50px;
-    width: auto;
+/* Containers / Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em 0;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+header, footer, main {
+  width: 100%;
 }
 
-.nav-links li a {
-    text-decoration: none;
-    color: #2a99de;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
+/* Header */
+.site-header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 1em 0;
+}
+.site-header .logo {
+  float: left;
+}
+.site-header nav {
+  float: right;
+}
+.site-header nav ul {
+  list-style: none;
+}
+.site-header nav ul li {
+  display: inline-block;
+  margin-left: 1em;
 }
 
-.nav-links li a:hover {
-    color: #1a6fa5;
+/* Hero / Banner */
+.hero {
+  background-color: #e0e6ef;
+  color: #222;
+  padding: 3em 0;
+  text-align: center;
+}
+.hero h1 {
+  margin-bottom: 0.5em;
+}
+.hero p {
+  font-size: 1.125rem;
 }
 
-/* Hero Section */
-#hero {
-    background-color: #2a99de;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+/* Main content / grids */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5em;
+}
+.row > * {
+  flex: 1;
+  padding: 0.5em;
 }
 
-#hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+/* Example for two-column */
+.col-2 {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .col-2 {
+    width: 50%;
+  }
 }
 
-#hero p {
-    font-size: 1.2rem;
-    line-height: 1.5;
+/* Sections */
+.section {
+  padding: 2em 0;
+}
+.section.alt {
+  background-color: #fff;
 }
 
-/* About Section */
-#about {
-    background-color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    margin-top: 20px;
-    border-radius: 8px;
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background-color: #0066cc;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-align: center;
 }
-
-#about h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+.btn:hover {
+  background-color: #0052a3;
 }
 
 /* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 14px;
+.site-footer {
+  background-color: #222;
+  color: #eee;
+  padding: 2em 0;
 }
+.site-footer a {
+  color: #89bfff;
+}
+.site-footer .footer-widgets {
+  display: flex;
+  flex-wrap: wrap;
+}
+.site-footer .widget {
+  flex: 1;
+  padding: 0.5em;
+}
+
+/* Utility / Helpers */
+.text-center {
+  text-align: center;
+}
+.mt-1 { margin-top: 1em; }
+.mb-1 { margin-bottom: 1em; }
+.hide {
+  display: none;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tables (if used) */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+}
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  text-align: left;
+}
+table th {
+  background-color: #f0f0f0;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 767px) {
+  .site-header nav {
+    float: none;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .site-header .logo,
+  .site-header nav {
+    display: block;
+  }
+}
+
+/* OPTIONAL: color accent based on brand */
+:root {
+  --brand-primary: #0066cc;
+  --brand-secondary: #444;
+  --brand-light: #f0f4fa;
+}
+.btn {
+  background-color: var(--brand-primary);
+}
+.btn:hover {
+  background-color: darken(var(--brand-primary), 10%);
+}
+
+/* You may override above with page-specific rules below */
