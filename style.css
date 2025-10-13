@@ -124,8 +124,8 @@ body {
 }
 .heading-6,
 h6{
-    font-size: 0.75rem;        /* Small text size */
-    font-weight: 600;          /* Semi-bold */
+    font-size: 0.85rem;        /* Small text size */
+    font-weight: 700;          /* Semi-bold */
     color: #333333;            /* Dark gray color */
     margin-bottom: 10px;       /* Space below the heading */
     text-transform: uppercase; /* Optional: Makes the text all uppercase */
