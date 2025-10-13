@@ -116,7 +116,14 @@ body {
   font-size: 2rem;
   color: #2a99de;
 }
-.heading-6 {
+
+.about-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.heading-6,
+h6{
     font-size: 0.75rem;        /* Small text size */
     font-weight: 600;          /* Semi-bold */
     color: #333333;            /* Dark gray color */
@@ -124,14 +131,6 @@ body {
     text-transform: uppercase; /* Optional: Makes the text all uppercase */
     letter-spacing: 0.5px;     /* Slight spacing between letters */
 }
-
-
-.about-section p {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 /* ========== Footer ========== */
 .site-footer {
   background-color: #333;
