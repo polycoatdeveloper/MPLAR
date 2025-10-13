@@ -116,6 +116,15 @@ body {
   font-size: 2rem;
   color: #2a99de;
 }
+.about-section heading-6 {
+    font-size: 0.75rem;        /* Small text size */
+    font-weight: 600;          /* Semi-bold */
+    color: #333333;            /* Dark gray color */
+    margin-bottom: 10px;       /* Space below the heading */
+    text-transform: uppercase; /* Optional: Makes the text all uppercase */
+    letter-spacing: 0.5px;     /* Slight spacing between letters */
+}
+
 
 .about-section p {
   max-width: 800px;
