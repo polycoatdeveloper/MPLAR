@@ -16,6 +16,65 @@
       cursor: pointer;
       justify-content:center;
     }
+    
+    .tooltip-text {
+      visibility: hidden;
+      width: 400px; /* Adjust as needed */
+      background-color: #1c75bc;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 125%; /* Position the tooltip above the text */
+      margin-left: -25px; /* Adjust to center the tooltip */
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .tooltip-container:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+	   p.rights a:hover{
+    color:white;
+  }
+  .footeraddy{
+    font-size:13px;
+    text-align:center;
+    color:#3d3d3d;
+    font-weight:400;
+    letter-spacing:.1px;
+  }
+  .apnbadge {
+    position:relative;
+    top:-30px;
+  }
+  .apnbadge img{
+    display:block;
+    margin:auto;
+  }
+@media (min-width: 768px) {
+
+  .apnbadge {
+    margin-top:0px;
+  }
+}
+  @media only screen 
+  and (min-device-width : 320px) 
+  and (max-device-width : 480px) {
+  .apnbadge{
+    margin-top:-50px !important;
+    padding-left:10px;
+  }
+  }
+  h6.footer-classic-title{
+    color:#000;
+  }
+  .footer-classic-list a{
+    color:#000;
+  }
        .family-owned {
    
     width:100%;
