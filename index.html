@@ -11,33 +11,36 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/novi.css">
   <style>
-	  .tooltip-container {
-      position: relative;
-      cursor: pointer;
-      justify-content:center;
-    }
-    
-    .tooltip-text {
-      visibility: hidden;
-      width: 400px; /* Adjust as needed */
-      background-color: #1c75bc;
-      color: white;
-      text-align: center;
-      border-radius: 5px;
-      padding: 5px 0;
-      position: absolute;
-      z-index: 1;
-      top: 125%; /* Position the tooltip above the text */
-      margin-left: -25px; /* Adjust to center the tooltip */
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    
-    .tooltip-container:hover .tooltip-text {
-      visibility: visible;
-      opacity: 1;
-    }
-	   p.rights a:hover{
+	.tooltip-container {
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+}
+
+.hover-text {
+  position: relative;
+  cursor: pointer;
+  color: #1c75bc;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 400px;
+  background-color: #1c75bc;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 125%; /* Below the text */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+}
+
+p.rights a:hover{
     color:white;
   }
   .footeraddy{
