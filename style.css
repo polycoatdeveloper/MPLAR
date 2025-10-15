@@ -303,3 +303,77 @@ color:#000 !important;}
 * + .footer-classic-panel {
 	margin-top: 50px;
 }
+/* === Footer 3‑column layout overrides === */
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  /* Allow wrapping if screen is small */
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1 1 0;
+  /* some padding so contents don’t stick to edges */
+  padding: 10px;
+  min-width: 200px; /* ensures columns don’t collapse too much */
+}
+
+/* Left, center, right alignment */
+.footer-left {
+  text-align: left;
+}
+.footer-center {
+  text-align: center;
+}
+.footer-right {
+  text-align: right;
+}
+
+/* For the image in left */
+.footer-left .apnbadge img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* For legal list (center) */
+.footer-center .footer-classic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-center .footer-classic-list li {
+  margin: 6px 0;
+}
+.footer-center .footer-classic-list a {
+  text-decoration: none;
+  color: inherit; /* keeps color defined earlier */
+}
+
+/* For the contact phone in right */
+.footer-right .footer-classic-contacts-item {
+  display: inline-flex;
+  align-items: center;
+}
+.footer-right .unit-left {
+  margin-right: 8px;
+}
+.footer-right .footer-classic-contacts .phone {
+  font-size: 1rem;
+  color: inherit;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-left, .footer-center, .footer-right {
+    width: 100%;
+    padding: 5px 0;
+  }
+  .footer-right {
+    text-align: center;
+  }
+}
+
