@@ -207,4 +207,28 @@ h6{
     text-align: center;
   }
 }
+/* Force the footer container to use flex */
+.footer-classic-content > .container > .footer-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+}
+
+/* Force the child columns */
+.footer-classic-content .footer-col {
+  flex: 1 1 0 !important;
+  padding: 10px !important;
+  min-width: 200px !important;
+}
+
+/* Alignment overrides */
+.footer-classic-content .footer-left {
+  text-align: left !important;
+}
+.footer-classic-content .footer-center {
+  text-align: center !important;
+}
+.footer-classic-content .footer-right {
+  text-align: right !important;
+}
 
