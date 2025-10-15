@@ -11,35 +11,46 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/novi.css">
   <style>
-	.tooltip-container {
-  position: relative;
-  text-align: center;
-  font-size: 16px;
-}
-
-.hover-text {
-  position: relative;
-  cursor: pointer;
-  color: #1c75bc;
-}
-
-.tooltip-text {
-  visibility: hidden;
-  opacity: 0;
-  width: 400px;
-  background-color: #1c75bc;
-  color: white;
-  text-align: center;
-  border-radius: 5px;
-  padding: 10px;
-  position: absolute;
-  z-index: 1;
-  top: 125%; /* Below the text */
-  left: 50%;
-  transform: translateX(-50%);
-  transition: opacity 0.3s ease;
-}
-
+section.brands {
+      width: 85%;
+      margin: 0 auto;
+      padding: 40px 0;
+      border-bottom: 1px solid #0A9143;
+      text-align: center;
+    }
+    .tooltip-container {
+      position: relative;
+      width: 100%;
+      margin-top: 30px;
+    }
+    .hover-text {
+      position: relative;
+      cursor: pointer;
+      color: #1c75bc;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .tooltip-text {
+      visibility: hidden;
+      opacity: 0;
+      width: 300px; /* adjust width as needed */
+      background-color: #1c75bc;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1000;
+      top: 125%;      /* display below the hover text */
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.3s ease;
+    }
+    .hover-text:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
 p.rights a:hover{
     color:white;
   }
