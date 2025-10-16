@@ -84,7 +84,11 @@ body {
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
-
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 .btn-primary {
   background-color: #fff;
   color: #2a99de;
