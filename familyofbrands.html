@@ -44,7 +44,7 @@
   <div class="tooltip-container" style="text-align:center; margin-top:40px;">
     <span class="hover-text" style="cursor:pointer; font-weight:600; position:relative;">
       Explore All Affiliated Brands &gt;
-      <span class="tooltip-text" style="
+     <!-- <span class="tooltip-text" style="
         visibility:hidden;
         opacity:0;
         width:300px;
@@ -59,10 +59,15 @@
         left:50%;
         transform:translateX(-50%);
         transition:opacity 0.3s;
-      ">
+      ">-->
         Coming Soon - Discover every division of the American Polymers Network
       </span>
     </span>
   </div>
-
+ <style>
+    .hover-text:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
 </section>
