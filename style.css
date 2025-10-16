@@ -111,6 +111,20 @@ body {
   height: auto;
   display: block;
 }
+/* Responsive height adjustments */
+@media (min-width: 768px) {
+  .hero-section {
+    min-height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    min-height: 500px;
+  }
+}
+
+
 .btn-primary {
   background-color: #fff;
   color: #2a99de;
