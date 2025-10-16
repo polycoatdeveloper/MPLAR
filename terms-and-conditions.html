@@ -17,24 +17,16 @@
 <body>
 
   <!-- ========== Header ========== -->
-  <header class="site-header">
-    <div class="container header-flex">
-      <div class="logo">
-        <img src="images/mpl.png" alt="Molecular Processing LLC Logo" height="50" width="150" />
-      </div>
-      <nav class="main-nav">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="contact-info">
-        <a href="tel:18007987771" class="phone-link">TOLL FREE: 1-800-798-7771</a>
-      </div>
-    </div>
-  </header>
+  <div id="header-placeholder"></div>
 
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+  
   <!-- ========== Hero Section ========== -->
   <section class="about-section">
     <div class="container">
