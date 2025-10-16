@@ -41,81 +41,33 @@
     </a>
   </div>
 
-  <!-- Tooltip -->
-  <div class="tooltip-container" style="text-align:center; margin-top:40px;">
-    <span class="hover-text" style="cursor:pointer; font-weight:600; position:relative;">
+<!-- Tooltip Section -->
+<div style="text-align:center; margin-top:40px;">
+  <div class="tooltip-container">
+    <span class="hover-text" onclick="toggleTooltip()">
       Explore All Affiliated Brands &gt;
-      <span class="tooltip-text" style="
-        visibility:hidden;
-        opacity:0;
-        width:300px;
-        background-color:#1c75bc;
-        color:#fff;
-        text-align:center;
-        border-radius:4px;
-        padding:10px;
-        position:absolute;
-        z-index:1;
-        top:130%;
-        left:50%;
-        transform:translateX(-50%);
-        transition:opacity 0.3s ease;
-      ">
+      <span class="tooltip-text" id="tooltip">
         Coming Soon - Discover every division of the American Polymers Network
       </span>
     </span>
   </div>
+</div>
 
-  <!-- Tooltip hover effect -->
-  <style>
-    .hover-text:hover .tooltip-text {
-      visibility: visible;
-      opacity: 1;
+<!-- Tooltip Script -->
+<script>
+  function toggleTooltip() {
+    const tooltip = document.getElementById('tooltip');
+    tooltip.classList.toggle('show');
+  }
+
+  // Close tooltip if clicking outside
+  document.addEventListener('click', function (e) {
+    const tooltip = document.getElementById('tooltip');
+    const hoverText = document.querySelector('.hover-text');
+    if (!hoverText.contains(e.target)) {
+      tooltip.classList.remove('show');
     }
-  </style>
+  });
+</script>
 </section>
-<!--<section style="width:85%; margin:auto; padding:40px 0; border-bottom:1px solid #ccc;">
-  <h2 style="text-align:center; font-weight:800;>A Family of Brands, United by Innovation</h2>
 
-  <p align="center" style="width:75%; margin: auto; color:#000;">
-    Molecular Processing LLC is part of the American Polymers Network of Companies, working together to provide cutting-edge solutions for industries worldwide. Backed by expert Chemists and Engineers, we develop high-quality, industry-leading products trusted in homes, businesses, landmarks and major industrial projects. Explore our family of brands, each dedicated to delivering performance, durability, and innovation.
-  </p>
-
-  <!-- Logo Grid
-  <div class="brand-logos" style="
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-  ">
-
-    <a href="https://polycoatusa.com" target="_blank">
-      <img src="images/polycoat.png" alt="Polycoat USA" style="width: 200px;">
-    </a>
-
-    <a href="https://crownpolymers.com" target="_blank">
-      <img src="images/crownpolymers.png" alt="Crown Polymers" style="width: 200px;">
-    </a>
-
-    <a href="https://upcfoam.com" target="_blank">
-      <img src="images/upc.png" alt="UPC Foam" style="width: 150px;">
-    </a>
-
-    <a href="https://polyfil.com" target="_blank">
-      <img src="images/Polyfil.png" alt="Polyfil" style="width: 200px;">
-    </a>
-
-    <a href="https://generalcoatings.net" target="_blank">
-      <img src="images/gcmc.png" alt="General Coatings" style="width: 200px;">
-    </a>
-
-    <a href="https://www.diamondliners.com" target="_blank">
-      <img src="images/diamondliner.png" alt="Diamond Liners" style="width: 200px;">
-    </a>
-
-  </div>
-
-<!-- Tooltip 
-<br/><br/> <div class="tooltip-container"> <span class="hover-text">Explore All Affiliated Brands &gt; <span class="tooltip-text">Coming Soon - Discover every division of the American Polymers Network</span> </span> </div>
-</section> -->
