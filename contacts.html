@@ -34,8 +34,9 @@
   </section>
 
   <!-- ========== Contact Us Content ========== -->
-  <section class="about-section">
-    <div class="container">
+<section class="about-section">
+  <div class="container">
+    <div class="contact-grid">
       <dl class="list-terms">
         <dt class="heading-6">Contact Information</dt>
         <dd>
@@ -49,11 +50,42 @@
           Telephone Number: (501)767-7776 <br>
           Or via our <a href="contacts.html">contact form</a>.
         </dd>
-
       </dl>
-    </div>
-  </section>
 
+      <!-- HubSpot form mounts here -->
+      <div id="hs-form-container" aria-label="Contact form"></div>
+    </div>
+  </div>
+</section>
+<style>
+  .about-section .contact-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  /* Let each column take half width on large screens and stack on small */
+  .about-section .contact-grid > *{
+    flex: 1 1 320px;
+  }
+  /* Optional: keep the form from shrinking too small */
+  #hs-form-container{ min-width: 320px; }
+</style>
+<!-- HubSpot Forms -->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  // Render the form into our specific container
+  window.addEventListener('load', function () {
+    if (window.hbspt && hbspt.forms) {
+      hbspt.forms.create({
+        portalId: "39564004",
+        formId: "255b24ff-c3ae-493d-a9cd-25d4efcb9bf2",
+        region: "na1",
+        target: "#hs-form-container"
+      });
+    }
+  });
+</script>
   <!-- ========== Footer ========== -->
   <div id="footer-placeholder"></div>
 
