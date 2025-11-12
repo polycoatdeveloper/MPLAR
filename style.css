@@ -321,13 +321,24 @@ h6{
 
 /*about us bg header */
 .bgaboutus {
-  background-color:transparent;
+  background-color:#1c75bc;
   background-image: url('images/aboutus1.jpg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   width:400%;
   height: 500px;
+}
+.bgaboutus::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  ...
+}
+.bgaboutus::before,
+.bgaboutus::after {
+  background: none !important;
+  content: none !important;
 }
 @media (max-width: 768px) {
   .bgaboutus {
