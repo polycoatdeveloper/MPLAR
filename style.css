@@ -319,3 +319,12 @@ h6{
   text-align: right !important;
 }
 
+/*about us bg header */
+.bgaboutus {
+  background-image: url('images/aboutus1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+}
