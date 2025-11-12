@@ -321,6 +321,7 @@ h6{
 
 /*about us bg header */
 .bgaboutus {
+  background-color:#1c75bc
   background-image: url('images/aboutus1.jpg');
   background-size: cover;
   background-position: center;
