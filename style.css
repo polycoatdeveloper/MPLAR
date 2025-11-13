@@ -346,3 +346,11 @@ h6{
     background-size: cover; /* fills smaller screens */
   }
 }
+.container a {
+  color: inherit;       /* Keep the same text color */
+  text-decoration: none; /* No underline by default */
+}
+
+.container a:hover {
+  text-decoration: underline; /* Underline appears on hover */
+}
